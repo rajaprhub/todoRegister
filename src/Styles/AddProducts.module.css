@@ -1,0 +1,39 @@
+
+.container{
+    
+    max-width: fit-content;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    width: 300px;
+    height: auto;
+ }
+
+.inp{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.btn{
+    background-color: #adb5bd;
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    width: 30%;
+ }
+
