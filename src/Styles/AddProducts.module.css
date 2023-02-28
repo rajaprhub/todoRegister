@@ -2,11 +2,12 @@
 .container{
     
     max-width: fit-content;
-    border: 1px solid red;
+    border: 1px solid whitesmoke;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
     padding: 15px;
+    background-color: #adb5bd;
 }
 
 
@@ -29,11 +30,14 @@ form{
 }
 
 .btn{
-    background-color: #adb5bd;
+    background-color: black;
     padding: 5px;
     color: white;
     border-radius: 3px;
     border: none;
     width: 30%;
  }
-
+ button :hover{
+    background-color: black;
+    color: azure;
+ }

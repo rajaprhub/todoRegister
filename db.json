@@ -5,49 +5,17 @@
       "password": "masai@sgmail.com",
       "name": "masai@sgmail.com",
       "id": 1
-    },
-    {
-      "email": "masai@sgmail.com",
-      "password": "masai@sgmail.com",
-      "name": "masai@sgmail.com",
-      "id": 2
     }
   ],
+
+
   "userproduct": [
     {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "",
-      "price": "",
-      "desc": "",
+      "image": "",
+      "name": "sads",
+      "price": "56",
+      "desc": "leraning",
       "id": 1
-    },
-    {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "",
-      "price": "",
-      "desc": "",
-      "id": 2
-    },
-    {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "ads",
-      "price": "",
-      "desc": "",
-      "id": 3
-    },
-    {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "ads",
-      "price": "",
-      "desc": "",
-      "id": 4
-    },
-    {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "masai",
-      "price": "52",
-      "desc": "dsg",
-      "id": 5
     }
   ]
 }
