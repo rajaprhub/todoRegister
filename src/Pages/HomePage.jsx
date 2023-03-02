@@ -67,9 +67,12 @@ export const HomePage = () => {
     }
    
     useEffect(()=>{
-       fetchData()
-       sortOrder(sort)
+      sortOrder(sort)
     },[sort])
+    
+    useEffect(()=>{
+      fetchData()
+    },[])
 
    
     
