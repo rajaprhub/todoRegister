@@ -39,9 +39,9 @@ export const AddProducts = () => {
         {/* <h5> AddProduct now</h5> */}
         <div className={styles.container}>
           <form  onSubmit={handleSubmit} >
-             <input type="url"    className={styles.inp}    onChange ={handleInput}  name="image"  placeholder="image"/>
+             <input type="url"    className={styles.inp}    onChange ={handleInput} name="image"  placeholder="image"/>
              <input type="text"   className={styles.inp}    onChange ={handleInput} name="name"   placeholder="name"/>
-             <input type="number" className={styles.inp}  onChange ={handleInput} name="price"   placeholder="price"/>
+             <input type="number" className={styles.inp}    onChange ={handleInput} name="price"   placeholder="price"/>
              <input type="text"   className={styles.inp}    onChange ={handleInput} name="desc"   placeholder="description"/>
              <button type="submit" className={styles.btn}> Add Now</button>
           </form>

@@ -46,7 +46,7 @@ export const Navbar = () => {
              <Link to="/">
                 <Button> Home</Button>
              </Link>
-             <Link to="/">
+             <Link to="/addproducts">
                 <Button>Add products</Button>
              </Link>
 

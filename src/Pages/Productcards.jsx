@@ -8,8 +8,10 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Container ,
   InputGroup,
   HStack,
+  Spacer,
   InputRightElement,
   Stack,
   Button,
@@ -20,38 +22,44 @@ import {
 
 
 export const Productcards = ( props) => {
-  const {data,sort} = props
-      console.log("product card now",data)
+  const {data,HandleSort} = props
+    
 
-
-        
-  return (
+ return (
     <> 
-      <div>
+     <div style={{ height:"100%"}}    >
+    
+         
+     <Flex minWidth='max-content'  justifyContent="space-around" alignItems='center' gap='1'>
+           <Box size='md'  p='1' >
+             <Input  border='1px solid black'  w='200px' placeholder='search ' />
+          </Box>
+          <Box p='1' >
           <span >Sort By</span>
-          <select onChange={(e)=>sort(e)}>
+             <select onChange={(e)=>HandleSort(e)}>
              <option>Relevance</option>
              <option value="LH">Price: Low to High</option>
              <option value="HL">Price: High to Low</option>
-          <option></option>
-         </select>
-       </div>
-
-         <div className= {styles.container}>
+            <option></option>
+          </select>
+          </Box>
+        </Flex>
+      
+          <SimpleGrid  className={styles.maincarddiv}>
               {
                   data.map( (el) =>(
-                     <div   className={styles.box}  key= {el.id}>
-                          <img  src={el.image}/>
+                       <Box  className={styles.box}  key= {el.id}>
+                          <img   className={styles.imagebox}  src={el.image}/>
                            <div>
                               <p>{el.name}</p>
-                              <p>{el.price}</p>
+                              <h3>{el.price}</h3>
                               <p>{el.desc}</p>
-
                             </div> 
-                       </div>  
+                       </Box>  
                   ))
                }
-          </div>
+          </SimpleGrid>
+       </div>
     </>
   )
 }

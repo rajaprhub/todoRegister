@@ -32,7 +32,7 @@ import React ,{ useState ,useEffect} from 'react';
                   if((res[i].email===inputs.email && res[i].password===inputs.password)){
                     x = true
                     window.location.href="/"
-                    console.log("login sucess")
+                    console.log("login success")
                   }
                 }
 

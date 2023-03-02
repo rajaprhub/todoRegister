@@ -1,4 +1,4 @@
-.container {
+.maincarddiv {
     padding: 1rem;
     border: 1px solid whitesmoke;
     margin: auto;
@@ -6,13 +6,15 @@
     display:grid;
     grid-gap:10px ;
     grid-template-columns: repeat(3,1fr);
-    gap:15px;
     width: 95%;
- 
   }
    
   .box{
     block-size: max-content;
     border: 1px solid gray;
     padding: 10px;
+   
+  }
+  .imagebox{
+    height: 50px;
   }
