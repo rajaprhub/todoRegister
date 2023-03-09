@@ -19,15 +19,14 @@ import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 
 export const Register = () =>{
-  
-      const [inputs,setInputs] = useState ( 
-        { email: "",password:"", name:""}
+    const [inputs,setInputs] = useState ( 
+           { email: "",password:"", name:""}
         )
-
-console.log(inputs)
+       // console.log(inputs)
       const handleInput = (event)=>{
          setInputs( {...inputs,[event.target.name] : event.target.value})
       }
+
    //  ****************************
     const Registeruser = async ()=>{
          try {
@@ -39,7 +38,7 @@ console.log(inputs)
                   }
                })
                res = await res.json()
-           
+               alert("signUP success")
             } catch (error) {
               console.log(error)
             }
@@ -50,12 +49,7 @@ console.log(inputs)
        Registeruser()
       }
    //  ****************************
-
-   
-    
-
-
-   const [showPassword, setShowPassword] = useState(false);
+ const [showPassword, setShowPassword] = useState(false);
   return (
     <Flex
       minH={'60vh'}

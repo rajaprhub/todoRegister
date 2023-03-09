@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode ,useContext} from 'react';
 import { Link } from 'react-router-dom';
 import {
   Box,
@@ -18,6 +18,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import  {AuthContext}  from '../Context/AuthContext';
 
 const NavLink = ({ children }) => (
   <Link
@@ -36,6 +37,10 @@ const NavLink = ({ children }) => (
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
+  const {authState,loginUser,logoutUser} = useContext(AuthContext);
+
+  
+
 
   return (
     <>
@@ -46,16 +51,20 @@ export const Navbar = () => {
              <Link to="/">
                 <Button> Home</Button>
              </Link>
+
              <Link to="/addproducts">
-                <Button>Add products</Button>
+                <Button>Add producs</Button>
              </Link>
 
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-              <Link to="/login">
+              {authState.isAuth?  
+                <Button onClick={logoutUser}> Logout</Button>
+              : <Link to="/login">
                 <Button> Login</Button>
-              </Link>
+              </Link>}
+             
               <Link to="/register">
                 <Button> Sign up</Button>
               </Link>

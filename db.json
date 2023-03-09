@@ -5,29 +5,40 @@
       "password": "masai@sgmail.com",
       "name": "masai@sgmail.com",
       "id": 1
-    }
-  ],
-  "userproduct": [
-    {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "",
-      "price": "40",
-      "desc": "ten",
-      "id": 1
     },
     {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "",
-      "price": "20",
-      "desc": "twenty",
+      "email": "rajapr269@gmail.com",
+      "password": "rajapr269@gmail.com",
+      "name": "rajapr269@gmail.com",
       "id": 2
     },
     {
-      "image": "https://www.masaischool.com/img/navbar/logo.svg",
-      "name": "",
-      "price": "30",
-      "desc": "thirty",
+      "email": "rajapr269@gmail.com",
+      "password": "rajapr269@gmail.com",
+      "name": "rajapr269@gmail.com",
       "id": 3
+    },
+    {
+      "email": "rajapr269@gmail.com",
+      "password": "rajapr269@gmail.com",
+      "name": "rajapr269@gmail.com",
+      "id": 4
+    }
+  ],
+  "userproduct": [
+   {
+      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
+      "name": "dsg",
+      "price": "65",
+      "desc": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
+      "id": 1
+    },
+    {
+      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
+      "name": "dsaf",
+      "price": "87",
+      "desc": "mc donalds",
+      "id": 2
     }
   ]
 }

@@ -14,9 +14,15 @@
         } from '@chakra-ui/react';
 
 import React ,{ useState ,useEffect} from 'react';
+import {useNavigate ,Navigate} from "react-router-dom" ;
+import { AuthContext } from "../Context/AuthContext";
         
   export const Login = ()=> {
+    const navigate = useNavigate();
      const [inputs,setInputs] = useState ( { email: "",password:""}) ;
+     const {authState,loginUser,logoutUser} = React.useContext(AuthContext);
+
+     console.log(authState,"maggi")
    
     const handleInput = (event)=>{
        setInputs( {...inputs,[event.target.name] : event.target.value})
@@ -27,15 +33,15 @@ import React ,{ useState ,useEffect} from 'react';
             let res = await fetch(`http://localhost:3030/user`)
                 res = await res.json() ;
             //  console.log(res)
-                let x = false 
+                // let x = false 
                 for(let i=0; i< res.length; i++){
                   if((res[i].email===inputs.email && res[i].password===inputs.password)){
-                    x = true
-                    window.location.href="/"
-                    console.log("login success")
-                  }
+                    loginUser()
+                    // window.location.href="/"
+                    alert("login success");
+                    // navigate("/")
+                   }
                 }
-
            }
            catch (error) {
              console.log(error)
@@ -43,21 +49,23 @@ import React ,{ useState ,useEffect} from 'react';
      
        }
 
-  
-    
+       if(authState.isAuth){ 
+        return <Navigate to="/" />
+      }
+
      return (
             <Flex
               minH={'90vh'}
               align={'center'}
               justify={'center'}
-              bg={useColorModeValue('gray.50', 'gray.800')}>
+           >
               <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
                 <Stack align={'center'}>
                   <Heading fontSize={'4xl'}>Login to your account</Heading>
                 </Stack>
                 <Box
                   rounded={'lg'}
-                  bg={useColorModeValue('white', 'gray.700')}
+                  // bg={useColorModeValue('white', 'gray.700')}
                   boxShadow={'lg'}
                   p={8}>
                   <Stack spacing={4}>
