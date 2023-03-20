@@ -5,10 +5,10 @@ export const AuthContext = React.createContext() ;
 export const AuthContextProvider = ({children})=>{
   const [state,setState] = useState( {isAuth : false})
 
-  const loginUser = ()=>{
+  const loginUser = () =>{
      setState( {...state,isAuth : true})
   }
-  const logoutUser = ()=>{
+  const logoutUser = () =>{
     setState( {...state,isAuth : false})
   }
 

@@ -57,8 +57,8 @@ export const HomePage = () => {
       order = "asc"
     }
     else {
-    sortby = "id"
-    order = "asc"
+     sortby = "id"
+     order = "asc"
    }
        const res = await axios.get(`http://localhost:3030/userproduct`, {
          params: { _sort: sortby, _order: order }
@@ -83,17 +83,19 @@ export const HomePage = () => {
     
    return (
     <> 
-          <h1> Home page</h1>
-           {/* {authState.isAuth?
+          <h1> Home Page</h1>
+           {authState.isAuth?
            <div> <Productcards data = {data}
                       HandleSort = {HandleSort}
             />
-          </div> :""} */}
+          </div> :" Please Login to access Product "}
 
-          <div> <Productcards data = {data}
-                      HandleSort = {HandleSort}
+          {/* <div> 
+            <Productcards 
+               data       = {data}
+               HandleSort = {HandleSort}
             />
-          </div> 
+          </div>  */}
 
         
      </>

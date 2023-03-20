@@ -1,6 +1,5 @@
 
 .container{
-    
     max-width: fit-content;
     border: 1px solid whitesmoke;
     justify-content: center;
@@ -41,3 +40,4 @@ form{
     background-color: black;
     color: azure;
  }
+

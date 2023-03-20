@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styles from "../Styles/Homepage.module.css"
+import styles from "../Styles/ProductCard.module.css"
 
 import {
   Flex,
@@ -20,47 +20,16 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 
-
-export const Productcards = ( props) => {
-  const {data,HandleSort} = props;
- 
-
-//   let [data,setdata] = useState(props.data);
-//  console.log(data)
-
-  // const [filtered_data,set_filtered_data] =useState([]);
-  // const [search,setsearch] = useState("");
-
-
-  // useEffect(()=>{
-         
-  //   console.log(data,filtered_data,"filtered_data")
-  //    let dataa = data.filter(ele =>{
-  //       if(search ==""){
-  //         return ele
-  //       }
-  //       else
-  //       {
-  //         if(ele.name?.includes(search)){
-  //           return ele
-  //         }
-  //       }
-  //    });
-
-  //    console.log(dataa,"data");
-      
-  //   set_filtered_data(dataa);
-  // },[ ])
-    
-
- return (
+  export const Productcards = ( props) => {
+     const {data,HandleSort} = props;
+     const [search,setsearch] = useState("");
+     
+  return (
     <> 
      <div style={{ height:"100%"}}    >
-    
-         
      <Flex minWidth='max-content'  justifyContent="space-around" alignItems='center' gap='1'>
            <Box size='md'  p='1' >
-             <Input onChange={(e)=> e.target.value} 
+             <Input onChange={(e)=> setsearch(e.target.value)} 
               border='1px solid black'  w='200px' placeholder='search ' />
           </Box>
           <Box p='1' >
@@ -77,14 +46,18 @@ export const Productcards = ( props) => {
           <SimpleGrid  className={styles.maincarddiv}>
               {
                   data.map( (el) =>(
-                       <Box  className={styles.box}  key= {el.id}>
-                          <img   className={styles.imagebox}  src={el.image}/>
-                           <div >
-                              <p>{el.name}</p>
-                              <h3>{el.price}</h3>
-                              <p>{el.desc}</p>
-                            </div> 
-                       </Box>  
+                       <Box  className={styles.procard}  key= {el.id}>
+
+                             <img  width={200} height={180}className={styles.imagebox}  src={el.image}/>
+                              <div className={styles.Procardd} > 
+                               <div style={ {display:"flex", justifyContent : "space-between"}}>    
+                                 <h1>Name : {el.name}</h1>
+                                 <h6> id: {el.id} </h6>
+                               </div>
+                              <h5>Price : {el.price}</h5>
+                              <p> Description : {el.desc}</p>
+                             </div>
+                        </Box>  
                   ))
                }
           </SimpleGrid>
