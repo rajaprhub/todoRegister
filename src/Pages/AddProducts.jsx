@@ -31,7 +31,13 @@ export const AddProducts = () => {
          //   *******************
          const handleSubmit =(e)=>{
             e.preventDefault();
-            addformProducts()
+            if(data.image =="" || data.name == "" || data.price == "" || data.desc == "" ){
+              alert("Please fill all Inputs to add Products")
+            }
+            else{
+              addformProducts()
+            }
+           
          }
           //   *******************
   return (

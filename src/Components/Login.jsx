@@ -21,7 +21,7 @@ import { AuthContext } from "../Context/AuthContext";
      const navigate = useNavigate();
      const [inputs,setInputs] = useState ( { email: "",password:""}) ;
      const {authState,loginUser,logoutUser} = React.useContext(AuthContext);
-  console.log(authState,"maggi")
+  console.log(authState,"is authstate now")
    
     const handleInput = (event)=>{
        setInputs( {...inputs,[event.target.name] : event.target.value})

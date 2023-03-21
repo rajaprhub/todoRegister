@@ -19,37 +19,73 @@ import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 
 export const Register = () =>{
-    const [inputs,setInputs] = useState ( 
+     const [inputs,setInputs] = useState ( 
            { email: "",password:"", name:""}
         )
-       // console.log(inputs)
       const handleInput = (event)=>{
          setInputs( {...inputs,[event.target.name] : event.target.value})
       }
 
    //  ****************************
     const Registeruser = async ()=>{
+ 
          try {
-               let res = await fetch(`http://localhost:3030/user`,{
-                  method: "POST",
-                  body: JSON.stringify(inputs),
-                  headers: {
-                    "Content-Type":"application/json"
-                  }
-               })
-               res = await res.json()
-               alert("signUP success")
-            } catch (error) {
+                 const res = await fetch(`http://localhost:3030/user`,{
+                      method: "POST",
+                      body: JSON.stringify(inputs),
+                      headers: {
+                        "Content-Type":"application/json"
+                      }
+                   })
+                   res = await res.json()
+                   alert("signUP success")
+             } 
+            catch (error) {
               console.log(error)
             }
         }
    //  ****************************
       const handleSubmit =(e)=>{
-       e.preventDefault();
-       Registeruser()
-      }
+        let status = true
+        e.preventDefault();
+           if(inputs.name =="" || inputs.email == "" || inputs.password == "" ){
+            alert("Please fill all the credentials")
+          }
+          else if(inputs.password.length<=6){
+            alert("Length of password should be atleast 6")
+        }
+         
+       else{
+         let existuserdetail = ''
+         fetch("http://localhost:3030/user")
+          .then((res) => res.json())
+          .then((res) => { existuserdetail = res
+            // console.log(existuserdetail)
+            for(let i=0; i <= existuserdetail.length; i++){
+              if(existuserdetail[i].name == inputs.name ){
+                status = false
+                 alert("user Name already exist")
+                 break; 
+               }
+               else if(existuserdetail[i].email==inputs.email){
+                status = false
+                alert("Email is already registered")
+                 break
+              }
+          } //loop
+              
+             if(status){
+                Registeruser()
+                setInputs({email: "",password:"", name:""})
+                }
+         }) //res exist
+           
+        }
+
+      }  //handle submit end
    //  ****************************
  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <Flex
       minH={'60vh'}
@@ -73,8 +109,9 @@ export const Register = () =>{
         
             <FormControl id="name" isRequired>
               <FormLabel>Name</FormLabel>
-               <Input type="text"
-                 name="name"            //name
+               <Input type="text"    //name
+                value = {inputs.name}
+                 name="name"            
                  onChange ={handleInput} 
                  autoFocus
                 />
@@ -82,18 +119,20 @@ export const Register = () =>{
 
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email"           //name
-                 name="email" 
+              <Input type="email"           //email
+                 value = {inputs.email}
+                name="email" 
                  onChange ={handleInput}  
-                autoFocus
+                 autoFocus
                 />
             </FormControl>
 
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
               <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'}
-                    name="password"                  //name
+                <Input type={showPassword ? 'text' : 'password'} //password
+                     value = {inputs.password}
+                    name="password"                 
                     onChange ={handleInput}
                     autoFocus
                  />
