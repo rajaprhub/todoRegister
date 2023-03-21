@@ -36,6 +36,7 @@ export const AddProducts = () => {
             }
             else{
               addformProducts()
+              setData({  image: "", name:"", price:"", desc:""})
             }
            
          }
@@ -45,10 +46,10 @@ export const AddProducts = () => {
         {/* <h5> AddProduct now</h5> */}
         <div className={styles.container}>
           <form  onSubmit={handleSubmit} >
-             <input type="url"    className={styles.inp}    onChange ={handleInput} name="image"  placeholder="image"/>
-             <input type="text"   className={styles.inp}    onChange ={handleInput} name="name"   placeholder="name"/>
-             <input type="number" className={styles.inp}    onChange ={handleInput} name="price"   placeholder="price"/>
-             <input type="text"   className={styles.inp}    onChange ={handleInput} name="desc"   placeholder="description"/>
+             <input type="url"  value={data.image} className={styles.inp}  onChange ={handleInput} name="image"  placeholder="image"/>
+             <input type="text" value={data.name}   className={styles.inp}    onChange ={handleInput} name="name"   placeholder="name"/>
+             <input type="number"  value={data.price}   className={styles.inp}    onChange ={handleInput} name="price"   placeholder="price"/>
+             <input type="text"  value={data.desc}   className={styles.inp}    onChange ={handleInput} name="desc"   placeholder="description"/>
              <button type="submit" className={styles.btn}> Add Now</button>
           </form>
 

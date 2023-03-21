@@ -1,6 +1,6 @@
 .maincarddiv {
     padding: 1rem;
-    border: 1px solid whitesmoke;
+    border: 1px solid transparent;
     margin: auto;
     display:grid;
     grid-gap:15px ;
@@ -18,12 +18,18 @@
     height: 100%;
     border: 1px solid transparent;
     border-radius: 8%;
-    background-color: gray;
+    /* background-color: gray; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-align: left;
    }
- 
-   .Procardd{
-    color: yellow;
+  
+   .Procardd h1{
+    color: greenyellow;
+   }
+   .Procardd h5{
+    color: chartreuse;
+   }
+   .Procardd p{
+    color: yellowgreen;
    }
  

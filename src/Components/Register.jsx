@@ -38,7 +38,7 @@ export const Register = () =>{
                       }
                    })
                    res = await res.json()
-                   alert("signUP success")
+            
              } 
             catch (error) {
               console.log(error)
@@ -61,23 +61,24 @@ export const Register = () =>{
           .then((res) => res.json())
           .then((res) => { existuserdetail = res
             // console.log(existuserdetail)
-            for(let i=0; i <= existuserdetail.length; i++){
+            for(let i=0; i < existuserdetail.length; i++){
               if(existuserdetail[i].name == inputs.name ){
-                status = false
+                 status = false
                  alert("user Name already exist")
-                 break; 
+             
                }
                else if(existuserdetail[i].email==inputs.email){
                 status = false
                 alert("Email is already registered")
-                 break
               }
-          } //loop
+           } //loop
               
              if(status){
-                Registeruser()
-                setInputs({email: "",password:"", name:""})
+                  Registeruser()
+                 setInputs({email: "",password:"", name:""})
+                 alert("signUP success")
                 }
+
          }) //res exist
            
         }
@@ -171,5 +172,3 @@ export const Register = () =>{
     </Flex>
   );
 }
-
-        

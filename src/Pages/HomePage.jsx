@@ -35,7 +35,8 @@ import { AuthContext } from '../Context/AuthContext';
       //  }).then( (res)=>setData(res.data) )
 
 export const HomePage = () => {
-
+  
+   
 
   const {authState,loginUser,logoutUser} = React.useContext(AuthContext);
   const [data,setData] = useState([])

@@ -48,11 +48,11 @@ import {
                   data.map( (el) =>(
                        <Box  className={styles.procard}  key= {el.id}>
 
-                             <img  width={200} height={180}className={styles.imagebox}  src={el.image}/>
+                             <img  width={"95%"} height={180}className={styles.imagebox}  src={el.image}/>
                               <div className={styles.Procardd} > 
                                <div style={ {display:"flex", justifyContent : "space-between"}}>    
-                                 <h1>Name : {el.name}</h1>
-                                 <h6> id: {el.id} </h6>
+                                 <h1> Name : {el.name}</h1>
+                                 <h6> id:{el.id} </h6>
                                </div>
                               <h5>Price : {el.price}</h5>
                               <p> Description : {el.desc}</p>

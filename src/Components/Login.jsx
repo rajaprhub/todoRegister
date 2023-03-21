@@ -16,40 +16,45 @@
 import React ,{ useState ,useEffect} from 'react';
 import {useNavigate ,Navigate} from "react-router-dom" ;
 import { AuthContext } from "../Context/AuthContext";
-        
-  export const Login = ()=> {
+import { saveData,loadData } from '../Utilis/localStorage';
+
+export const Login = ()=> {
      const navigate = useNavigate();
      const [inputs,setInputs] = useState ( { email: "",password:""}) ;
-     const {authState,loginUser,logoutUser} = React.useContext(AuthContext);
-  console.log(authState,"is authstate now")
    
-    const handleInput = (event)=>{
-       setInputs( {...inputs,[event.target.name] : event.target.value})
-    }
-        const HandleLogin =  async (e)=>{
-          e.preventDefault()
-          try {
-            let res = await fetch(`http://localhost:3030/user`)
-                res = await res.json() ;
-               //  console.log(res)
-                // let x = false 
-                for(let i=0; i < res.length; i++){
-                  if((res[i].email===inputs.email && res[i].password===inputs.password)){
+     const handleInput = (event)=>{
+      setInputs( {...inputs,[event.target.name] : event.target.value})
+     }
+  
+     const {authState,loginUser,logoutUser} = React.useContext(AuthContext);
+    //  console.log("is authstate now",authState)
+   
+   
+   const Loginsucessful = async  ()=>{
+      try{
+        let res = await fetch(`http://localhost:3030/user`)
+        res = await res.json()
+        let x = false
+         for(let i=0; i< res.length; i++){
+                if(res[i].email==inputs.email &&   res[i].password==inputs.password){
+                    console.log(i)
                     loginUser()
-                    alert("login success");
-                    // window.location.href="/"
-                    navigate("/")
-                   }
-                   else{
-                    alert("Invalid credentials or signUp ");
-                   }
-                }
-           }
-           catch (error) {
-             console.log(error)
+                    console.log("login  Matched")
+                   return ;
+               }
+               
           }
-     
        }
+
+       catch (error) {
+         console.log(error)
+      }
+     }
+
+       const HandleLogin =  async (e)=>{
+          e.preventDefault()
+           Loginsucessful()
+      }
 
        if(authState.isAuth){ 
         return <Navigate to="/" />

@@ -5,56 +5,68 @@
       "password": "rajapr269@gmail.com",
       "name": "raja",
       "id": 1
+    },
+    {
+      "email": "mahe8@gmail.com",
+      "password": "mahe8@gmail.com",
+      "name": "mahe",
+      "id": 2
+    },
+    {
+      "email": "masai8@gmail.com",
+      "password": "masai8@gmail.com",
+      "name": "masai",
+      "id": 3
     }
   ],
   "userproduct": [
     {
-      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
-      "name": "addsd",
-      "price": "50",
-      "desc": "addsd",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K754.jpg?ver=26.17",
+      "name": "Crunchy chicken",
+      "price": "299",
+      "desc": "cheese, spicy sauce, veggies &",
       "id": 1
     },
     {
-      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
-      "name": "addsd",
-      "price": "75",
-      "desc": "addsd",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002295.jpg?ver=26.17",
+      "name": "Chizza & Pepsi Combo",
+      "price": "356",
+      "desc": "Best-selling combo of your favorite",
       "id": 2
     },
     {
-      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
-      "name": "addsd",
-      "price": "30",
-      "desc": "addsd",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002260.jpg?ver=26.17",
+      "name": "Duo Chizza",
+      "price": "588",
+      "desc": "2 Chizzas at a deal price",
       "id": 3
     },
     {
-      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
-      "name": "addsd",
-      "price": "60",
-      "desc": "addsd",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002153.jpg?ver=26.17",
+      "name": "Peri Peri 10 Strip",
+      "price": "639",
+      "desc": "Dynamite Spicy Mayo Sauce Bottle",
       "id": 4
     },
     {
-      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
-      "name": "raja",
-      "price": "",
-      "desc": "raja",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00000892.jpg?ver=26.17",
+      "name": "Bucket for Two",
+      "price": "599",
+      "desc": "Flat Rs. 115 off on combo of 2pc Hot",
       "id": 5
     },
     {
-      "image": "https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg",
-      "name": "raja",
-      "price": "65",
-      "desc": "raja",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002155.jpg?ver=26.17",
+      "name": "Peri Peri 10 Leg pc",
+      "price": "920",
+      "desc": "Leg before any wicket! Save",
       "id": 6
     },
     {
-      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT212.jpg?ver=26.17",
-      "name": " Combo",
-      "price": "448",
-      "desc": "Try Allus fav-1 Hot & Crispy Chicken,1 Smoky Red, Reg",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K445.jpg?ver=26.17",
+      "name": "Smoky Red Chicken",
+      "price": "499",
+      "desc": "Flat 20% off on 5pc Smoky red grilled chicken",
       "id": 7
     }
   ]
